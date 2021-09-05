@@ -1,0 +1,6 @@
+[submodule "ydb-dotnet-sdk"]
+	path = ydb-dotnet-sdk
+	url = https://github.com/YandexDatabase/ydb-dotnet-sdk.git
+[submodule "ydb-dotnet-yc"]
+	path = ydb-dotnet-yc
+	url = https://github.com/YandexDatabase/ydb-dotnet-yc.git

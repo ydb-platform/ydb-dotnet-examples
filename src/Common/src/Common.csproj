@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Ydb.Sdk.Examples.Common</AssemblyName>
+    <RootNamespace>Ydb.Sdk.Examples</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ydb-dotnet-sdk\src\Table\src\Table.csproj" />
+  </ItemGroup>
+
+</Project>
