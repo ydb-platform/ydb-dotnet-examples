@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Ydb.Sdk.Auth;
 using Ydb.Sdk.Table;
 
 namespace Ydb.Sdk.Examples
@@ -50,13 +51,14 @@ namespace Ydb.Sdk.Examples
         public static async Task Run(
             string endpoint,
             string database,
+            ICredentialsProvider credentialsProvider,
             string path,
             ILoggerFactory loggerFactory)
         {
             var config = new DriverConfig(
                 endpoint: endpoint,
                 database: database,
-                credentials: null
+                credentials: credentialsProvider
             );
 
             using var driver = new Driver(

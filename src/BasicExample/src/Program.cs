@@ -38,6 +38,7 @@ namespace Ydb.Sdk.Examples
             await BasicExample.Run(
                 endpoint: cmdOptions.Endpoint,
                 database: cmdOptions.Database,
+                credentialsProvider: await AuthUtils.MakeCredentialsFromEnv(loggerFactory: loggerFactory),
                 path: cmdOptions.Path,
                 loggerFactory: loggerFactory
             );
