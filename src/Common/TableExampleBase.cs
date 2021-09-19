@@ -8,4 +8,8 @@ public class TableExampleBase {
         Client = client;
         BasePath = string.Join('/', new [] {database, path});
     }
+
+    protected string FullTablePath(string table) {
+        return string.Join('/', new [] {BasePath, table});
+    }
 }
