@@ -24,7 +24,7 @@ namespace Ydb.Sdk.Examples
         private static ServiceProvider GetServiceProvider()
         {
             return new ServiceCollection()
-               .AddLogging(configure => configure.AddConsole().SetMinimumLevel(LogLevel.Debug))
+               .AddLogging(configure => configure.AddConsole().SetMinimumLevel(LogLevel.Information))
                .BuildServiceProvider();
         }
 

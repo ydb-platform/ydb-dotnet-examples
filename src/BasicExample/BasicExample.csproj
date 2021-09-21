@@ -9,6 +9,13 @@
     <RootNamespace>Ydb.Sdk.Examples</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ydb-platform/ydb-dotnet-examples</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ydb-platform/ydb-dotnet-examples</PackageProjectUrl>
+    <Company>YANDEX LLC</Company>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
