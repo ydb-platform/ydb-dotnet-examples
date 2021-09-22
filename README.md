@@ -17,7 +17,8 @@ dotnet build
 
 3. Run example
 ```bash
-dotnet run -p <ExampleName> -e <Endpoint> -d <Database>
+cd <ExampleName>
+dotnet run -e <Endpoint> -d <Database>
 ```
 
 ## Provided examples
