@@ -39,6 +39,7 @@ namespace Ydb.Sdk.Examples
                 endpoint: cmdOptions.Endpoint,
                 database: cmdOptions.Database,
                 credentialsProvider: await AuthUtils.MakeCredentialsFromEnv(loggerFactory: loggerFactory),
+                customServerCertificate: AuthUtils.GetCustomServerCertificate(),
                 path: cmdOptions.Path,
                 loggerFactory: loggerFactory
             );

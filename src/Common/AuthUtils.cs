@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Ydb.Sdk.Auth;
@@ -34,6 +35,10 @@ public static class AuthUtils {
         }
 
         throw new InvalidOperationException("Failed to parse credentials from environmet, no valid options found.");
+    }
+
+    public static X509Certificate? GetCustomServerCertificate() {
+        return YcCerts.GetDefaultServerCertificate();
     }
 
     private static bool IsTrueValue(string value) {

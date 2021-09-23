@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Ydb.Sdk.Auth;
@@ -17,13 +18,15 @@ namespace Ydb.Sdk.Examples
             string endpoint,
             string database,
             ICredentialsProvider credentialsProvider,
+            X509Certificate? customServerCertificate,
             string path,
             ILoggerFactory loggerFactory)
         {
             var config = new DriverConfig(
                 endpoint: endpoint,
                 database: database,
-                credentials: credentialsProvider
+                credentials: credentialsProvider,
+                customServerCertificate: customServerCertificate
             );
 
             using var driver = new Driver(
