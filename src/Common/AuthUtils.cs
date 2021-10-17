@@ -25,6 +25,14 @@ public static class AuthUtils {
             return new AnonymousProvider();
         }
 
+        var metadataValue = Environment.GetEnvironmentVariable("YDB_METADATA_CREDENTIALS");
+        if (metadataValue != null && IsTrueValue(metadataValue)) {
+            var metadataProvider = new MetadataProvider(
+                loggerFactory: loggerFactory);
+            await metadataProvider.Initialize();
+            return metadataProvider;
+        }
+
         var tokenValue = Environment.GetEnvironmentVariable("YDB_ACCESS_TOKEN_CREDENTIALS");
         if (!string.IsNullOrEmpty(tokenValue)) {
             return new TokenProvider(tokenValue);
